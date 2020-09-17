@@ -1,0 +1,1393 @@
+:root {
+  --header: 21,21,21;
+  --friendlist: 30,30,31;
+  --footer: 21,21,21;
+  --text: 255,255,255;
+  --listtext: 145,145,145;
+  --unreadmessage: 0,255,0;
+  --nickname: 102,102,102;
+  --icon: 185,187,190;
+  --iconhover: 255,255,255;
+  --titleiconbg: 30,30,31;
+  --titleiconhover: var(--iconhover);
+  --ingame: 130,186,0;
+  --online: 93,178,254;
+  --away: 250,166,26;
+  --offline: 145,145,145;
+  --watching: 149,117,205;
+  --buttonOn: 45,115,255;
+  --buttonOff: 46,46,47;
+  --scrollbarPrimary: 55,55,55;
+  --scrollbarPrimaryHover: 97,97,97;
+  --scrollbarSecondary: var(--scrollbarPrimary);
+  --scrollbarSecondaryHover: var(--scrollbarPrimaryHover);
+  --closeButton: 240,71,71;
+  --closeIconHover: 255,255,255;
+  --border-width-sm: 2px;
+  --border-width: 4px;
+  --border-radius-sm: 2px;
+  --border-radius: 4px;
+  --border-radius-lg: 8px;
+  --border-radius-round: 50%;
+  --spacer-xs: 2px;
+  --spacer-sm: 4px;
+  --spacer: 12px;
+  --spacer-lg: 24px;
+  --padding-sm: 2px;
+  --padding: 4px;
+  --padding-lg: 8px;
+  --shadow: 8px;
+}
+.ChatMsgSlashEmote .speaker .speakerAvatar,.ChatRoomGroupAvatar,.ChatRoomSpeaker .speaker .speakerAvatar,.Dialog_ChangePersonaName .friend .avatarMedium,.Dialog_EditNickName .friend .avatarMedium,.avatarHolder .avatar,.currentUserAvatar,.groupName .gameGroupContainer .groupIcon,.miniprofile_miniProfileContent_25Sge .miniprofile_playerAvatar_1dzWG,.voiceChatGroup {
+  border-radius: var(--border-radius-round)!important;
+}
+.FavoriteFriend_GameIcon,.avatarStatus {
+  bottom: 0!important;
+  box-shadow: 0 0 0 4px rgb(var(--friendlist))!important;
+  height: 33%!important;
+  position: absolute;
+  top: auto!important;
+  width: 33%!important;
+  z-index: 4!important;
+}
+.avatarStatus {
+  background: rgb(var(--friendlist))!important;
+  border-radius: 50%!important;
+  display: block!important;
+  left: auto!important;
+  margin-left: 0!important;
+  margin-top: 0!important;
+  opacity: 1!important;
+  right: 0!important;
+  transition: none!important;
+}
+.voiceSelfDirections {
+  .avatarStatus {
+    height: 16px!important;
+    left: 35px!important;
+    right: auto!important;
+    width: 16px!important;
+  }
+}
+.friendStatusHover {
+  &:hover {
+    .avatarStatus {
+      box-shadow: 0 0 0 4px rgb(var(--header))!important;
+    }
+  }
+}
+.miniProfileHover .avatarStatus,.quickAccessFriends .avatarStatus {
+  background: rgb(var(--header));
+  box-shadow: 0 0 0 4px rgb(var(--header))!important;
+}
+.ChatTabsContextMenu .contextMenuItem:not(:hover) .avatarStatus,.FriendPicker .friend:not(:hover) .avatarStatus,.chattabs_ChatTab_1WfqA:not(.chattabs_Active_3sMSI) .avatarStatus {
+  background-color: rgb(var(--header));
+  box-shadow: 0 0 0 4px rgb(var(--header))!important;
+}
+.compactQuickAccess .FavoriteFriend_GameIcon,.speaker .speakerStatus {
+  display: none!important;
+}
+.FavoriteFriend_GameIcon {
+  border-radius: 100%!important;
+  left: 0!important;
+  img {
+    transform: scale(140%,140%)!important;
+  }
+}
+.avatarHolder {
+  &.online {
+    &:not(.awayOrSnooze) {
+      .avatarStatus {
+        background: rgb(var(--online))!important;
+      }
+    }
+  }
+  &.watchingbroadcast {
+    &:not(.awayOrSnooze) {
+      .avatarStatus {
+        background: rgb(var(--watching))!important;
+      }
+    }
+  }
+  &.ingame {
+    &:not(.awayOrSnooze) {
+      .avatarStatus {
+        background: rgb(var(--ingame))!important;
+      }
+    }
+  }
+  &.offline {
+    .avatarStatus {
+      background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 10 10' style='enable-background: new 0 0 10 10;
+      ' xml: space='preserve'%3E%3Cmask id='svg-mask-status-offline' maskContentUnits='objectBoundingBox' viewBox='0 0 1 1'%3E%3Ccircle fill='white' cx='0.5' cy='0.5' r='0.5'%3E%3C/circle%3E%3Ccircle fill='black' cx='0.5' cy='0.5' r='0.25'%3E%3C/circle%3E%3C/mask%3E%3Crect width='10' height='10' x='0' y='0' fill='%23747F8D' mask='url(%23svg-mask-status-offline)'%3E%3C/rect%3E%3C/svg%3E%0A")!important;
+      background-repeat: no-repeat;
+    }
+  }
+  &.awayOrSnooze {
+    .avatarStatus {
+      background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 10 10' style='enable-background: new 0 0 10 10;
+      ' xml: space='preserve'%3E%3Cmask id='svg-mask-status-idle' maskContentUnits='objectBoundingBox' viewBox='0 0 1 1'%3E%3Ccircle fill='white' cx='0.5' cy='0.5' r='0.5'%3E%3C/circle%3E%3Ccircle fill='black' cx='0.25' cy='0.25' r='0.375'%3E%3C/circle%3E%3C/mask%3E%3Crect width='10' height='10' x='0' y='0' fill='%23faa61a' mask='url(%23svg-mask-status-idle)'%3E%3C/rect%3E%3C/svg%3E%0A")!important;
+      background-repeat: no-repeat;
+      -webkit-mask: none!important;
+    }
+  }
+}
+.ChatTabsContextMenu .awayOrSnooze .avatarStatus,.ChatTabsContextMenu .offline .avatarStatus,.FriendPicker .awayOrSnooze:hover .avatarStatus,.FriendPicker .offline:hover .avatarStatus,.MemberListColumn .avatarStatus,.OneOnOneVoiceMembers .awayOrSnooze .avatarStatus,.OneOnOneVoiceMembers .offline .avatarStatus,.chatTabSetContainer .awayOrSnooze .avatarStatus,.chatTabSetContainer .offline .avatarStatus,.friendCategoryContainer .offline .avatarStatus,.friendlistListContainer .awayOrSnooze .avatarStatus {
+  background-color: rgb(var(--friendlist))!important;
+}
+.ChatTabsContextMenu .contextMenuItem:not(:hover) .awayOrSnooze .avatarStatus,.ChatTabsContextMenu .contextMenuItem:not(:hover) .offline .avatarStatus,.chattabs_ChatTab_1WfqA:not(.chattabs_Active_3sMSI) .awayOrSnooze .avatarStatus,.chattabs_ChatTab_1WfqA:not(.chattabs_Active_3sMSI) .offline .avatarStatus,.friendCategoryContainer .offline:hover .avatarStatus,.friendlistListContainer .awayOrSnooze:hover .avatarStatus,.miniProfileHover .awayOrSnooze .avatarStatus {
+  background-color: rgb(var(--header))!important;
+}
+.miniProfileHover {
+  .golden {
+    .avatarStatus {
+      background: linear-gradient(to bottom,#d5bf6a 0,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);
+    }
+  }
+}
+.miniprofile_miniProfileContent_25Sge {
+  .miniprofile_miniProfileHeader_3oBIW {
+    background: rgba(var(--friendlist),.3)!important;
+    background: rgba(var(--friendlist),.3)!important;
+  }
+  .miniprofile_playerAvatar_1dzWG {
+    height: 90px!important;
+  }
+}
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfileGameContainer_2FyZH,.miniprofile_miniProfileContent_25Sge.miniprofile_notInOrWatchingGame_3AIC2 .miniprofile_miniProfileBottom_3Agb6 {
+  background: linear-gradient(to bottom,rgba(var(--header),.7) 5%,rgba(var(--header),.4) 95%)!important;
+  background: linear-gradient(to bottom,rgba(var(--header),.7) 5%,rgba(var(--header),.4) 95%)!important;
+}
+.miniprofile_miniProfileBackgroundBlur_G000o {
+  display: inline!important;
+  display: inline!important;
+}
+.SVGIcon_Button,.TabSearchButton .ColorSelector,.addFriendButton .SVGIcon_AddFriend .friendBody,.addFriendButton .SVGIcon_AddFriend .friendHead,.addFriendButton .SVGIcon_AddFriend .plusCircle,.chatentry_chatSubmitButton_3VRfL:hover .SVGIcon_Button.SVGIcon_Submit path,.friendRequestButton .SVGIcon_FriendRequest .friendArm,.friendRequestButton .SVGIcon_FriendRequest .friendBody,.friendRequestButton .SVGIcon_FriendRequest .friendBodyFull,.friendRequestButton .SVGIcon_FriendRequest .friendHead,.friendSettingsButton .SVGIcon_Settings {
+  fill: rgb(var(--icon))!important;
+}
+.title-area-icon {
+  align-items: center;
+  cursor: pointer;
+  height: 20px!important;
+  padding: var(--padding-sm);
+  width: 22px!important;
+}
+.DNDCheckBox .DialogToggle_Label,.ToggleGroupChatList {
+  width: 100%!important;
+}
+.title-bar-actions {
+  right: 0!important;
+  .title-area-icon {
+    display: flex;
+  }
+}
+.singleWindowToggle {
+  margin-right: 4px!important;
+  top: 0!important;
+}
+.SVGIcon_Maximize,.SVGIcon_Minimize,.SVGIcon_Restore,.SVGIcon_SingleWindowToggle,.SVGIcon_X_Line {
+  display: block!important;
+  margin: 0 auto!important;
+}
+.SVGIcon_SingleWindowToggle {
+  margin-top: 3px!important;
+}
+.SVGIcon_Minimize {
+  margin-bottom: 8px!important;
+}
+.closeButton line,.maximizeButton line,.maximizeButton rect,.minimizeButton line,.restoreButton line,.restoreButton rect,.singleWindowToggle line,.singleWindowToggle rect {
+  stroke: rgb(var(--icon))!important;
+  stroke-width: 24px;
+}
+.maximizeButton:hover line,.maximizeButton:hover rect,.minimizeButton:hover line,.restoreButton:hover line,.restoreButton:hover rect,.singleWindowToggle:hover line,.singleWindowToggle:hover rect {
+  stroke: rgb(var(--titleiconhover))!important;
+}
+.SVGIcon_SingleWindowToggle:hover,.maximizeButton:hover,.minimizeButton:hover,.restoreButton:hover,.singleWindowToggle:hover {
+  background: rgb(var(--titleiconbg))!important;
+}
+.closeButton {
+  &:hover {
+    background: rgb(var(--closeButton))!important;
+    line {
+      stroke: rgb(var(--closeIconHover))!important;
+    }
+  }
+}
+.TabSearchButton .ColorSelector,.ToggleMemberListView polyline,.VoiceToggleIconCtn path,.VoiceToggleIconCtn polyline,.chatRoomButton .SVGIcon_Button line,.chatentry_chatSubmitButton_3VRfL circle,.chatentry_chatSubmitButton_3VRfL line,.chatentry_chatSubmitButton_3VRfL path,.friendSearchClear .SVGIcon_X_Line line,.inviteAnotherFriendButton .SVGIcon_Button line {
+  stroke: rgb(var(--icon))!important;
+}
+.AvatarAndUser .avatarStatus,.ExpandPlusMinus,.FriendInGameIcon,.SVGIcon_Button.SVGIcon_Shadow,.ToggleGroupChatList svg,.TradeOffer_NoteFromFriend_QuoteArrow,.UnreadGlow,.emoticon_hover_arrow.left,.emoticon_hover_arrow.right,.friend.quickAccessFriend .playerNameQuickAccessContainer,.friendGroup .groupName .groupCount,.friendListFooter,.msg.timeDivision,.title-area-highlight {
+  display: none!important;
+}
+.ChatRoomListGroupItem .detailsView,.SingleWindowFocusBar,.chatRoomVoiceChannel,.chatRoomVoiceChannel.ActiveVoiceChannel,.chatRoomVoiceChannel.ActiveVoiceChannel .activeVoiceButtons,.chatentry_chatEntryActionsGroup_15mWd,.emoticon_NewEmoticonIndicator_3NVON,.singleWindowFocusBar {
+  background: 0 0!important;
+}
+.currentUserContainer {
+  border-bottom: 0!important;
+  .labelHolder {
+    margin: 0 0 5px 8px!important;
+  }
+  .avatar {
+    z-index: 0!important;
+  }
+}
+.AvatarAndUser {
+  padding-top: 16px;
+}
+.DNDCheckBox {
+  flex-direction: row-reverse!important;
+  .DialogCheckbox {
+    position: absolute;
+    top: calc(50% - 8px);
+  }
+}
+.persona_menu_dnd_descriptor {
+  padding-left: 0!important;
+}
+.DialogCheckbox_Container {
+  &.DNDCheckBox {
+    margin-top: 0!important;
+  }
+}
+.contextMenuItem {
+  color: rgb(var(--listtext))!important;
+  &.menuChecked {
+    color: rgb(var(--buttonOn));
+  }
+  &:hover {
+    .SVGIcon_Button {
+      fill: rgb(var(--iconhover))!important;
+      stroke: rgb(var(--iconhover))!important;
+    }
+  }
+}
+.friendListHeaderContainer {
+  background-color: rgb(var(--header))!important;
+  border-bottom: 0!important;
+}
+.ChatRoomListGroupItem .groupNameStatusContainer .chatRoomName,.contextMenuGameName,.friendGroup.gameGroup .groupName,.friendGroup.taggedGroup .groupName,.msgText,.recentChatsGroup .friendGroup .groupName,.socialListTab .tabLabel {
+  color: rgb(var(--text))!important;
+}
+.ChatMessageInvite,.DialogSlider_Grabber,.contextMenuGameOptions,.contextMenuGameTitle,.contextMenuSectionContent,.socialListTab {
+  background: rgb(var(--header))!important;
+}
+.friendsTabButtonsContainer {
+  .TabSearchButton {
+    border-radius: 50px;
+  }
+}
+.ContextMenuButton:hover .SVGIcon_DownArrowContextMenu,.MicStatus .SVGIcon_Button,.SVGIcon_Button:hover,.VoiceControlPanelButton:hover .SVGIcon_Button,.addFriendButton:hover .SVGIcon_AddFriend .friendBody,.addFriendButton:hover .SVGIcon_AddFriend .friendHead,.addFriendButton:hover .SVGIcon_AddFriend .plusCircle,.friendRequestButton:hover .SVGIcon_FriendRequest .friendArm,.friendRequestButton:hover .SVGIcon_FriendRequest .friendBody,.friendRequestButton:hover .SVGIcon_FriendRequest .friendBodyFull,.friendRequestButton:hover .SVGIcon_FriendRequest .friendHead,.friendSettingsButton .SVGIcon_Settings:hover {
+  fill: rgb(var(--iconhover))!important;
+}
+.friendSearchInput {
+  background-color: rgb(var(--friendlist))!important;
+  background-image: none!important;
+  border-radius: 50px!important;
+  padding-left: 12px!important;
+}
+.ChatRoomListGroupItem:hover,.DialogButton.voicesettings_HotkeyButton_1bV2N,.TabSearchButton:hover,.chatDialogs,.chatTabSelector:hover,.chatWindow {
+  background: rgb(var(--friendlist))!important;
+}
+.chatentry_chatEntryActionsContainer_WZNUD,.friendSearchClear .SVGIcon_X_Line {
+  margin: auto!important;
+}
+.friend.awayOrSnooze .labelHolder,.quickAccessFriends .friend.friend.awayOrSnooze .avatarHolder img {
+  opacity: 1!important;
+}
+.quickAccessFriends {
+  .favoriteElement {
+    &:hover {
+      .friend {
+        .avatarHolder {
+          transform: scale(1.05,1.05) translateX(0);
+        }
+      }
+    }
+  }
+  .ChatUnreadMessageIndicator {
+    .chatUnreadCircle {
+      bottom: -60%!important;
+      box-shadow: 0 0 14px 1px rgb(var(--unreadmessage)),0 0 32px 1px rgb(var(--unreadmessage));
+      margin: 0 auto;
+      position: relative;
+      right: 0!important;
+      z-index: 3;
+    }
+  }
+}
+.quickAccessFriend {
+  .avatarHolder {
+    padding: 0!important;
+    transform: scale(1,1) translateX(0);
+  }
+}
+.CompactFriendsList .friend,.CompactFriendsList .friendGroup .friend,.favoriteElement {
+  height: auto!important;
+}
+.friend {
+  &.quickAccessFriend {
+    margin-bottom: 4px;
+    margin-top: 4px;
+    .avatarHolder {
+      .avatar {
+        width: 42px;
+      }
+    }
+  }
+  .labelHolder {
+    height: auto;
+  }
+}
+.window_resize_grip {
+  margin-right: -50px!important;
+}
+.friendsListSectionTitle {
+  background-color: rgb(var(--footer))!important;
+  border-top-left-radius: 0!important;
+  border-top-right-radius: 0!important;
+  &.chatSectionTitle {
+    .groupChatSectionTitle {
+      color: rgb(var(--text));
+      padding-left: 12px!important;
+    }
+  }
+  .SVGIcon_NewChatGroup {
+    line {
+      stroke: rgb(var(--footer))!important;
+    }
+    .Bubble {
+      &:hover {
+        fill: rgb(var(--iconhover));
+      }
+    }
+  }
+}
+.ToggleGroupChatList {
+  bottom: 0;
+  display: inline-block!important;
+  height: 90%!important;
+  position: absolute!important;
+  z-index: 11!important;
+}
+.createChatRoomButton {
+  z-index: 12;
+}
+.chatRoomListContainer {
+  background: rgb(var(--footer))!important;
+  width: 100%!important;
+  z-index: 20;
+}
+.SVGIcon_VoiceRoom .Bubble,.VoiceToggleIconCtn,.VoiceToggleIconCtn .SVGIcon_VoiceRoom .Microphone,.friendsListSectionTitle .SVGIcon_NewChatGroup .Bubble {
+  fill: rgb(var(--icon));
+}
+.chatRoomTextChannel {
+  .chatUnreadCircle {
+    left: 8px!important;
+    top: auto!important;
+  }
+}
+.ChatRoomListGroupItemChatRooms {
+  margin-left: 16px;
+}
+.chatRoomVoiceChannel {
+  border: none!important;
+  box-shadow: none!important;
+  &.ActiveVoiceChannel {
+    .VoiceControlPanelButton {
+      &.chatEndVoiceChat {
+        border-left: 0!important;
+        border-radius: var(--border-radius)!important;
+      }
+    }
+  }
+  .chatRoomTextChannel {
+    border-left: 0!important;
+    border-radius: var(--border-radius);
+  }
+  &:hover {
+    background-color: none!important;
+  }
+}
+.contextMenu .contextMenuItem,.contextMenuItem {
+  border-top: 0!important;
+}
+.ChatRoomListGroupItem {
+  margin-left: 8px;
+  padding: var(--padding-sm) 0 var(--padding-sm) 0;
+  &:hover {
+    border-radius: var(--border-radius);
+  }
+  .membersInVoice {
+    .voiceChatGroup {
+      background: 0 0;
+      border: none;
+      box-shadow: none;
+    }
+  }
+  .ContextMenuButton {
+    height: 42px;
+    padding-right: 6px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    z-index: 8!important;
+  }
+  .openGroupButton {
+    margin-right: 24px;
+  }
+  .chatRoomVoiceChannel {
+    &.ActiveVoiceChannel {
+      .chatRoomTextChannel {
+        border-radius: var(--border-radius)!important;
+        bottom: 1px!important;
+      }
+    }
+  }
+}
+.ChatRoomListGroupItem_header,.ChatTabsContextMenu.CompactFriendsList .friend,.ChatTabsContextMenu.CompactFriendsList .friendGroup .SteamPlayerGroupFooter,.ChatTabsContextMenu.CompactFriendsList .friendGroup .friend,.ChatTabsContextMenu.CompactFriendsList .friendGroup.gameGroup:not(.OtherGamesGroup) .friend {
+  padding: 0;
+}
+.DialogTextInputBase,.TradeOffer_NoteFromFriend,._DialogInputContainer,.chatRoomGroupNavColumn,.clanInviteContainer:hover,.friendStatusHover.Friend_ContextMenuActive,.friendStatusHover:not(.quickAccessFriend):hover {
+  background-color: rgb(var(--header))!important;
+}
+.ingame .personanameandstatus_gameName_qvibF,.ingame .personanameandstatus_playerName_1uxaf,.ingame .personanameandstatus_richPresenceLabel_3Q6g1,.ingame.personastatusicons_PersonaStatusIcon_2rP7f path {
+  color: rgb(var(--ingame))!important;
+  fill: rgb(var(--ingame))!important;
+}
+.online .personanameandstatus_gameName_qvibF,.online .personanameandstatus_playerName_1uxaf,.online .personanameandstatus_richPresenceLabel_3Q6g1,.online.personastatusicons_PersonaStatusIcon_2rP7f path {
+  color: rgb(var(--online))!important;
+  fill: rgb(var(--online))!important;
+}
+.offline .personanameandstatus_gameName_qvibF,.offline .personanameandstatus_richPresenceLabel_3Q6g1,.offline.personanameandstatus_playerName_1uxaf,.offline.personastatusicons_PersonaStatusIcon_2rP7f path {
+  color: rgb(var(--offline))!important;
+  fill: rgb(var(--offline))!important;
+}
+.awayOrSnooze .personanameandstatus_gameName_qvibF,.awayOrSnooze .personanameandstatus_playerName_1uxaf,.awayOrSnooze .personanameandstatus_richPresenceLabel_3Q6g1,.awayOrSnooze.personastatusicons_PersonaStatusIcon_2rP7f path {
+  color: rgb(var(--away))!important;
+  fill: rgb(var(--away))!important;
+}
+.away .messages_SpeakerName_InGame_1vaKy,.away .messages_SpeakerName_Online_2nKVN,.awayOrSnooze .miniprofile_awayStatusLabel_2UzRy,.awayOrSnooze .miniprofile_personaNameLabel_390p4,.friendsnooze_SnoozeZ_29fyi {
+  color: rgb(var(--away))!important;
+}
+.watchingbroadcast .personanameandstatus_gameName_qvibF,.watchingbroadcast .personanameandstatus_playerName_1uxaf,.watchingbroadcast .personanameandstatus_richPresenceLabel_3Q6g1,.watchingbroadcast .personastatusicons_PersonaStatusIcon_2rP7f path {
+  color: rgb(var(--watching))!important;
+  fill: rgb(var(--watching))!important;
+}
+.personanameandstatus_playerNickname_3-32P {
+  color: rgb(var(--nickname))!important;
+}
+.avatarHolder.awayOrSnooze :nth-last-child(3).avatar,.avatarHolder:not(.awayOrSnooze):not(.ingame) :nth-last-child(2).avatar,.friendlistListContainer :nth-last-child(2).avatar,.miniprofile_miniProfilePlayer_3cN6K .avatarHolder.awayOrSnooze :nth-last-child(2).avatar,.miniprofile_miniProfilePlayer_3cN6K .avatarHolder.ingame :nth-last-child(2).avatar,.miniprofile_miniProfile_s5zcg,.quickAccessFriend .avatarHolder.ingame :nth-last-child(3).avatar {
+  border: 0!important;
+  border-radius: 0!important;
+}
+.miniProfileHoverInner .watchingbroadcastThumbnail,.miniProfileHoverInner .watchingbroadcastThumbnail .crossfade,.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfileGameContainer_2FyZH .miniprofile_gameLogo_2B0di,.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfileHeader_3oBIW {
+  border-radius: var(--border-radius);
+}
+.messages_SpeakerName_Online_2nKVN,.online .miniprofile_awayStatusLabel_2UzRy,.online .miniprofile_personaNameLabel_390p4 {
+  color: rgb(var(--online))!important;
+}
+.ingame .miniprofile_personaNameLabel_390p4,.messages_SpeakerName_InGame_1vaKy,.miniprofile_ingame_3H2mq,.miniprofile_ingame_3H2mq .miniprofile_gameState_2Va3_,.miniprofile_ingame_3H2mq .miniprofile_richPresence_1rud4 {
+  color: rgb(var(--ingame))!important;
+}
+.messages_SpeakerName_Default_1Qo8j,.offline .miniprofile_personaName_W3QjS {
+  color: rgb(var(--offline))!important;
+}
+.miniprofile_watchingbroadcast_24vwG .miniprofile_gameState_2Va3_,.miniprofile_watchingbroadcast_24vwG .miniprofile_richPresence_1rud4,.watchingbroadcast .miniprofile_personaNameLabel_390p4 {
+  color: rgb(var(--watching))!important;
+}
+.MultiUserChat .isCurrentUser .msgText,.miniprofile_hasNickname_dgG-l .miniprofile_personaNameLabel_390p4 {
+  color: rgb(var(--listtext))!important;
+}
+.friendGroup.gameGroup,.friendGroup.taggedGroup {
+  border-top: 0!important;
+  margin-top: 0!important;
+}
+.FriendsListContent .friendlistListContainer .friendGroup.offlineFriends,.FriendsListContent .friendlistListContainer .friendGroup.onlineFriends {
+  border-top: none!important;
+  margin-top: 0!important;
+}
+.friendGroup {
+  .friend {
+    border-radius: var(--border-radius)!important;
+    margin-left: 8px!important;
+    padding-left: 4px!important;
+  }
+  .groupName {
+    margin-left: 12px!important;
+    margin-top: 4px!important;
+  }
+  &.gameGroup {
+    &:not(.OtherGamesGroup) {
+      .SteamPlayerGroupFooter {
+        margin-top: -6px!important;
+      }
+    }
+  }
+}
+.friendGroup.gameGroup:not(.OtherGamesGroup) .SteamPlayerGroupFooter,.friendGroup.gameGroup:not(.OtherGamesGroup) .friend {
+  margin-left: 8px;
+  padding: 6px 0 6px 12px!important;
+}
+.CompactFriendsList {
+  .friendGroup {
+    &.gameGroup {
+      &:not(.OtherGamesGroup) {
+        .SteamPlayerGroupFooter {
+          margin-left: 0;
+          height: 0!important;
+        }
+      }
+    }
+  }
+  .friendlistListContainer {
+    .friend {
+      &.ingame {
+        .labelHolder {
+          margin-top: -4px!important;
+        }
+      }
+    }
+  }
+  .SteamPlayerGroupFooterLabel {
+    align-self: end;
+  }
+}
+.gameGroupContainer {
+  margin-right: 0!important;
+  width: auto!important;
+}
+.groupName {
+  color: rgb(var(--text))!important;
+  -webkit-mask: linear-gradient(to right,#000 calc(100% - 6px),rgba(0,0,0,.15) 100%)!important;
+}
+.friendlistListContainer {
+  background: rgb(var(--friendlist))!important;
+  min-height: 0!important;
+  padding-top: 4px;
+  .ContextMenuButton {
+    height: 100%;
+    padding-right: 6px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    z-index: 8!important;
+  }
+  .friend {
+    &:hover {
+      .ContextMenuButton {
+        background: rgb(var(--header));
+        border-radius: var(--border-radius);
+        padding-left: 6px;
+      }
+    }
+    .avatarHolder {
+      padding-bottom: 2px;
+    }
+  }
+}
+.ContextMenuButton {
+  .SVGIcon_DownArrowContextMenu {
+    fill: rgb(var(--icon))!important;
+    height: 100%;
+    padding-left: 0;
+    padding-top: 0;
+  }
+}
+.CompactFriendsList .friend .labelHolder,.ContextMenuButton,.MemberListColumn .friend .rankIcon.isFriend .SVGIcon_Crown,.friendlistListContainer .friend.ingame .labelHolder {
+  margin-top: 0;
+}
+.contextmenu_contextMenu_3_a2Z {
+  background: rgb(var(--header))!important;
+  min-width: 9em!important;
+}
+.ChannelTypeTitle,.ChatTabsContextMenu .chattabs_Active_3sMSI .chattabs_ChatTabContent_ChatRoomName_2avXT,.chattabs_ChatTabContent_ChatRoomName_2avXT,.recentName {
+  color: rgb(var(--listtext));
+}
+.contextMenuItem.contextmenu_active_3vYUp,.contextMenuItem:hover {
+  background: rgb(var(--friendlist))!important;
+  border-radius: var(--border-radius)!important;
+}
+.contextMenuContents {
+  &.ChatTabs {
+    .contextMenuItem {
+      min-height: 42px!important;
+    }
+    &.CompactFriendsList {
+      .friend {
+        .labelHolder {
+          margin-left: -2px!important;
+          margin-top: 20px!important;
+        }
+      }
+    }
+  }
+  .chatTab {
+    .ChatTabContent {
+      min-height: 50px!important;
+    }
+  }
+}
+.unreadMessageViolator {
+  background: rgb(var(--header))!important;
+  border: 0!important;
+  border-radius: 40px!important;
+  color: rgb(var(--unreadmessage))!important;
+  height: 20px!important;
+  line-height: 20px!important;
+  margin-bottom: 4px!important;
+  margin-top: 5px!important;
+  width: 150px!important;
+}
+.unreadFriend {
+  .FriendMessageCount {
+    animation-name: none!important;
+    background: 0 0!important;
+    border-radius: 40px!important;
+    box-shadow: 0 0 14px 1px rgba(var(--unreadmessage),.5);
+    color: rgb(var(--unreadmessage))!important;
+    padding: 0;
+    top: 0;
+  }
+}
+.TradeOffer_NoteFromFriend {
+  border: 0!important;
+}
+.ChatRoomListGroupItemChatRooms .chatRoomVoiceChannel.ActiveVoiceChannel,.FriendPicker_SuggestedFriend,.confirmInviteRequestContainer,.confirmInviteRequestContainer .cancelAddFriends,.confirmInviteRequestContainer .cancelAddFriends .SVGIcon_Arrow polyline,.confirmInviteRequestContainer .cancelAddFriends:hover .SVGIcon_Arrow polyline,.confirmInviteRequestContainer .confirmInviteButton {
+  border-radius: var(--border-radius)!important;
+}
+.ChatUnreadMessageIndicator {
+  align-items: center!important;
+  background: 0 0!important;
+  display: flex!important;
+  height: 100%!important;
+  left: 0!important;
+  padding-left: 3px;
+  top: 0!important;
+}
+.ChatRoomList {
+  .ChatUnreadMessageIndicator {
+    position: relative;
+  }
+}
+.chatUnreadCircle,.chattabs_UnreadCircle_2goOD {
+  background: rgb(var(--unreadmessage))!important;
+  border: var(--border-width-sm) solid rgb(var(--unreadmessage))!important;
+  border-radius: 100%!important;
+  bottom: unset;
+  box-shadow: 0 0 10px 3px rgb(var(--unreadmessage));
+  color: transparent!important;
+  display: block!important;
+  height: 2px!important;
+  margin: 0;
+  position: relative;
+  right: unset;
+  width: 2px!important;
+}
+.FriendMessageCount,.chatTab .chatTabUnreadBadge {
+  background: rgba(var(--unreadmessage),.2);
+  border-radius: 50%;
+  color: rgb(var(--unreadmessage));
+  height: 22px;
+  padding: 0;
+  text-align: center;
+  width: 22px;
+}
+.ChatTabsContextMenu {
+  &.compactView {
+    .ChatTabContextMenuItem {
+      .TabRightContainer {
+        .chatTabUnreadBadge {
+          bottom: 50%;
+          height: 16px;
+          margin-right: 4px;
+          margin-top: -8px;
+          top: 50%;
+          &::before {
+            background-color: rgb(var(--unreadmessage));
+          }
+        }
+      }
+    }
+  }
+  .ChatUnreadMessageIndicator {
+    margin-left: 90%!important;
+  }
+  .chattabs_CloseButton_SzByZ {
+    height: 10px;
+    width: 10px;
+  }
+  .chattabs_ChatTab_1WfqA {
+    padding-left: var(--spacer-sm);
+  }
+}
+.ScrollToBottomButton {
+  color: rgb(var(--listtext));
+  padding: var(--padding-lg);
+  &.UnreadMessages {
+    & > span {
+      color: rgb(var(--unreadmessage));
+    }
+  }
+  & > span {
+    background: rgb(var(--footer))!important;
+    border-radius: var(--border-radius-lg)!important;
+  }
+}
+.chattabs_UnreadGlow_30PFd {
+  background: 0 0;
+  bottom: unset;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: unset;
+}
+.chatTabOpenFriendsList {
+  background-color: rgb(var(--friendlist))!important;
+  border-radius: var(--border-radius)!important;
+  height: 44px!important;
+  &:hover {
+    background-color: rgb(var(--buttonOn))!important;
+  }
+}
+.ChatMessageEntryVoice.Inactive .activeVoiceControls,.ChatTabContextMenuItem .personanameandstatus_richPresenceLabel_3Q6g1:not(.personanameandstatus_gameName_qvibF),.ChatTabsContextMenu .friendsnooze_SnoozeContainer_1OfTa,.ModalPosition_TopBar,.VoiceToggleIconCtn .Bubble,.chatStack .insetshadow_FriendListInsetShadowBottom_3cl4u,.chatentry_EmbedButton_1vvRh .SVGIcon_Paperclip circle,.chatentry_EmbedButton_1vvRh .SVGIcon_Paperclip line,.chatentry_EmbedButton_1vvRh .SVGIcon_Paperclip path,.chatentry_EmoticonPickerButton_3fgX0 .SVGIcon_Emoticon circle,.chatentry_EmoticonPickerButton_3fgX0 .SVGIcon_Emoticon line,.chatentry_EmoticonPickerButton_3fgX0 .SVGIcon_Emoticon path {
+  display: none;
+}
+.chatWindow .chatEntry>*,.personanameandstatus_compactView_2PCWF .personanameandstatus_playerName_1uxaf,.personanameandstatus_compactView_2PCWF .personanameandstatus_playerNickname_3-32P {
+  margin-bottom: 0;
+}
+.SteamPlayerGroupLines {
+  border-color: rgb(var(--icon))!important;
+}
+.MemberListColumn {
+  .friend {
+    .chatMemberFriendIcon {
+      svg {
+        bottom: 0;
+        left: -5px;
+        top: 9px;
+      }
+    }
+  }
+  &.MemberListViewCompact {
+    .friend {
+      .avatarHolder {
+        .avatarStatus {
+          transform: none!important;
+        }
+      }
+    }
+  }
+}
+.ChatSpeaker.ChatRoomSpeaker .speaker .rankIcon>*,.MemberListColumn .friend .rankIcon>* {
+  left: -3px;
+  margin-top: 0;
+  top: 0;
+}
+.steamavatar_avatar_f2laR {
+  border: none;
+  height: 100%;
+  width: auto;
+}
+.SVGIcon_VoiceRoom {
+  .Microphone {
+    fill: rgb(var(--footer));
+  }
+}
+.DialogButton.voicesettings_HotkeyClearButton_3Us-N line,.SVGIcon_Button.SVGIcon_CopyToClipboard,.SVGIcon_Pin .ground,.SVGIcon_Pin .head,.chatRoomGroupNavColumn circle,.chatRoomGroupNavColumn line,.chatRoomGroupNavColumn path,.chatRoomGroupNavColumn polyline,.chatRoomVoiceChannel .SVGIcon_TextRoom .TextLines,.groupHeaderContainer .SortByRecent .SVGIcon_SortBy {
+  stroke: rgb(var(--icon));
+}
+.OpenGraphFooter .OpenGraphURLButton:hover .SVGIcon_CopyToClipboard,.copyInviteLink:hover .SVGIcon_CopyToClipboard,.groupHeaderContainer .SortByRecent:hover .SVGIcon_SortBy {
+  stroke: rgb(var(--iconhover));
+}
+.SteamPlayerGroupFooterLabel {
+  color: rgb(var(--ingame));
+}
+.DialogInput {
+  border: none;
+}
+.ChannelTypeTitle .ChannelTypeLabel:hover:not(.NoPermission),.ChannelTypeTitle:hover,.DialogHeader,.DialogOnOffToggle_Control,.DialogTextInputBase,.PagedSettingsDialog_PageListItem,.ScrollToBottomButton:hover,._DialogInputContainer,.chattabs_Active_3sMSI .chattabs_ChatTabContent_ChatRoomName_2avXT {
+  color: rgb(var(--text));
+}
+.ChatRoomSpeaker {
+  .speaker {
+    .speakerName {
+      margin: auto 0 auto var(--padding-lg);
+    }
+    .speakerStatus {
+      align-self: auto;
+      margin: 0;
+    }
+  }
+}
+.speakerHoverArea {
+  height: fit-content;
+}
+.chatTabSelector,.compactView .chatTabSelector {
+  height: 32px!important;
+  width: 32px!important;
+}
+.ChatTabContent.ChatRoom .ChatRoomGroupAvatar,.ChatTabs.compactView .ChatTabContent.ChatRoom .ChatRoomGroupAvatar {
+  margin-left: 0!important;
+  margin-top: 0!important;
+}
+.ChatTabs.compactView .chatTabGroupName,.chatTabGroupName {
+  margin: auto 0!important;
+}
+.chattabs_ChatTab_1WfqA {
+  background: rgb(var(--header));
+  border-radius: var(--border-radius);
+  padding-right: var(--padding);
+  .chattabs_ChatTabContent_Friend_3m7Ps {
+    align-items: center!important;
+    padding: var(--padding-sm)!important;
+  }
+}
+.ChatHistoryContainer,.FriendPicker_SuggestedFriend.Focus,.MemberListColumn,.chatentry_chatEntryControls_2O_X7 {
+  background-color: rgb(var(--friendlist))!important;
+}
+.MemberListColumn,.chatRoomGroupNavColumn {
+  box-shadow: none;
+  z-index: 0;
+}
+.chatTabSelector {
+  align-items: center;
+  background: 0 0!important;
+  border: 0!important;
+  border-radius: var(--border-radius-round)!important;
+  display: flex;
+  margin-left: var(--spacer);
+  &.UnreadMessages {
+    .SVGIcon_DownArrowContextMenu {
+      fill: rgb(var(--unreadmessage))!important;
+    }
+  }
+  .SVGIcon_DownArrowContextMenu {
+    margin: 0 auto!important;
+    padding-left: var(--padding);
+    padding-top: var(--padding);
+  }
+}
+.emoticon_hover_content {
+  background-color: rgb(var(--friendlist))!important;
+  border: var(--border-width-sm) solid rgb(var(--header))!important;
+  border-radius: var(--border-radius)!important;
+}
+.emoticon_EmoticonSelector_177nw {
+  max-width: 375px!important;
+}
+.DialogOnOffToggle_Control,.emoticon_StickerButton_3O95u {
+  background: 0 0;
+}
+.emoticon_StickerButton_3O95u {
+  &:hover {
+    background: 0 0;
+    border: none;
+    box-shadow: none;
+    transform: scale(1.25);
+  }
+}
+.inviteAnotherFriendButton {
+  background-color: transparent!important;
+  margin-top: 4px;
+  top: unset;
+}
+.titleBarContainer {
+  &.ChatTabs {
+    background: rgb(var(--header))!important;
+    padding: var(--spacer-sm);
+  }
+}
+.speakerTimeStamp {
+  color: #3cb371!important;
+  line-height: 25px!important;
+}
+.chatWindow {
+  .chatHeader {
+    background: rgb(var(--header))!important;
+    min-height: 0!important;
+    z-index: 1;
+  }
+  .chatEntry {
+    background-color: rgb(var(--header))!important;
+    height: auto!important;
+    border-radius: 16px;
+    display: flex;
+    margin-bottom: 8px;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding: 0;
+  }
+}
+.chatEntry {
+  padding-bottom: 0!important;
+}
+.emoticon_NewEmoticonIndicator_3NVON {
+  bottom: 0!important;
+  height: 1px!important;
+  left: 0!important;
+  right: 0!important;
+  top: 41px!important;
+}
+.ChatTabsBackButton {
+  background: rgb(var(--friendlist))!important;
+  border: 0!important;
+  border-radius: var(--border-radius)!important;
+  margin-left: var(--spacer-xs)!important;
+}
+.chatRoomGroupHeader {
+  border-bottom: 0 solid rgba(23,24,29,.75)!important;
+}
+.chatRoomMembers {
+  border-left: 0 solid #22252b!important;
+  border-right: 0 solid rgba(34,37,43,0)!important;
+  height: auto!important;
+  user-select: none;
+}
+.inputContainer {
+  border-radius: var(--border-radius)!important;
+  overflow: visible!important;
+}
+.displayRow {
+  height: 100%!important;
+}
+.chatRoomTextChannel,.chatRoomTextChannelName {
+  transition: none;
+}
+.singleWindowDivider {
+  background-color: rgb(var(--header))!important;
+  border: 0!important;
+  border-bottom: 0!important;
+  border-top: 0!important;
+  min-width: 1px!important;
+  width: 1px!important;
+}
+.AssignCategoriesDialog_Friend {
+  background: #2e2e2f!important;
+  border-radius: var(--border-radius)!important;
+}
+.active .friend.offline .avatarHolder img.avatar,.chatentry_EmbedButton_1vvRh:hover .SVGIcon_Paperclip,.chatentry_EmoticonPickerButton_3fgX0:hover .SVGIcon_Emoticon {
+  filter: none!important;
+}
+.ActiveTextChannel {
+  background-color: rgb(var(--header))!important;
+  border-radius: var(--border-radius-sm)!important;
+  margin-left: 4px!important;
+}
+.VoiceToggle,.VoiceToggle.Active,.chatentry_chatSubmitButton_3VRfL.chatentry_EmbedButton_1vvRh {
+  background: 0 0!important;
+  border: 0!important;
+  border-radius: var(--border-radius-round);
+}
+.OneOnOneVoiceClose,.VoiceToggle.Inactive:hover,.VoiceToggle:hover,.chatentry_chatSubmitButton_3VRfL.chatentry_EmbedButton_1vvRh:hover,.chatentry_chatSubmitButton_3VRfL.chatentry_EmoticonPickerButton_3fgX0:hover,.chatentry_chatSubmitButton_3VRfL:not(.chatentry_disabled_2p2vW):hover {
+  background-color: rgb(var(--friendlist));
+}
+.ToggleMemberListView:hover polyline,.VoiceToggle:hover path,.VoiceToggle:hover polyline,.chatRoomGroupNavColumn polyline,.chatentry_chatSubmitButton_3VRfL:hover circle,.chatentry_chatSubmitButton_3VRfL:hover line,.chatentry_chatSubmitButton_3VRfL:hover path {
+  stroke: rgb(var(--iconhover))!important;
+}
+.chatentry_chatSubmitButton_3VRfL {
+  background-color: transparent!important;
+  border: 0!important;
+  margin: 0!important;
+  max-height: none!important;
+  padding: 0!important;
+  svg {
+    height: 25px!important;
+    vertical-align: middle;
+    width: 25px!important;
+  }
+  .SVGIcon_Submit {
+    transition: .2s linear;
+    path {
+      stroke-width: 6px;
+    }
+  }
+  &.chatentry_disabled_2p2vW {
+    .SVGIcon_Submit {
+      opacity: 0;
+    }
+  }
+}
+.FriendChatTypingNotification {
+  background: rgb(var(--header));
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 0 var(--shadow) #0008;
+  color: rgb(var(--text));
+  font-size: 12px;
+  margin: var(--padding-lg);
+  padding: var(--padding) var(--padding-lg) var(--padding) var(--padding-lg);
+  width: auto;
+}
+.msg div.ChatMessageOpenGraph,.msg div.SteamPublishedFile {
+  background: linear-gradient(to right,rgba(var(--header),.5) 40%,rgba(var(--header),1) 100%);
+}
+.msg {
+  .OpenGraphMessageURL {
+    background: linear-gradient(to right,rgba(var(--header),.2) 0,rgba(var(--header),.5) 40%,rgba(var(--header),1) 100%);
+  }
+}
+.ChatMessageBlock {
+  .ChatSpeaker {
+    &.ChatRoomSpeaker {
+      .speaker {
+        .rankIcon {
+          & > * {
+            left: 5px;
+            top: -10px;
+          }
+        }
+      }
+    }
+  }
+}
+.ChatTabContent {
+  &.ChatRoom {
+    .ChatRoomMultiFriendAvatar {
+      &.Small {
+        margin-left: 4px;
+        margin-top: 6px;
+      }
+    }
+  }
+}
+.ChatTabs.compactView .ChatTabContent.ChatRoom .ChatRoomGroupAvatar,.ChatTabs.compactView .ChatTabContent.ChatRoom .ChatRoomMultiFriendAvatar {
+  margin-top: 6px;
+}
+.MemberListViewCompact {
+  .ReactVirtualized__Grid__innerScrollContainer {
+    & > :not(.chatroomBucket_regular) {
+      display: none;
+      height: 0!important;
+    }
+  }
+}
+.ChatTabsContextMenu .chattabs_ChatTab_1WfqA.chattabs_Active_3sMSI:hover,.DialogContent,.DialogContentTransition,.chatTabSetContainer .chattabs_ChatTab_1WfqA.chattabs_Active_3sMSI,.toggle_ToggleRow_332T0 {
+  background: rgb(var(--friendlist));
+}
+.ChatTabsContextMenu .chattabs_ChatTab_1WfqA.chattabs_Active_3sMSI,.OneOnOneVoice-anim-enter-done,.OneOnOneVoiceRoomControls,.PagedSettingsDialog_PageListColumn,.WaitingForPartner,.chattabs_ChatTab_1WfqA:hover:not(.chattabs_Active_3sMSI) {
+  background: rgb(var(--header));
+}
+.chattabs_ChatTab_1WfqA.chattabs_Active_3sMSI .friend.offline .avatarHolder img.avatar,.chattabs_ChatTab_1WfqA:hover .friend.offline .avatarHolder img.avatar {
+  filter: none;
+}
+.chattabs_CloseButton_SzByZ {
+  margin: 0;
+  padding: var(--padding-sm);
+  transform: none;
+  &:hover {
+    background: rgb(var(--closeButton))!important;
+    border-radius: var(--border-radius-round)!important;
+  }
+}
+.chattabs_ChatTabContent_Friend_3m7Ps {
+  margin-right: var(--spacer-sm);
+}
+.ChatRoomMultiFriendAvatar {
+  margin: 0;
+}
+.ChatMessageEntryVoice {
+  background: 0 0!important;
+  border-left-color: rgb(var(--friendlist));
+  border-left-style: solid;
+  border-left-width: 1px;
+  margin: 0;
+  padding: 0;
+  .buttonsContainer {
+    margin: auto;
+    padding-right: 12px;
+  }
+  &.Active {
+    padding-right: 24px;
+  }
+  &.Disabled {
+    border: 0;
+    outline: 0;
+  }
+}
+.VoiceToggle,.activeVoiceControls,.buttonsContainer {
+  background: 0 0!important;
+  border: none!important;
+}
+.activeVoiceButtons .friendSettingsButton,.activeVoiceButtons .friendSettingsButton .SVGIcon_Settings {
+  height: 15px;
+  width: 15px;
+}
+.activeVoiceButtons {
+  .friendSettingsButton {
+    margin: auto 0 auto var(--spacer-xs);
+  }
+}
+.VoiceControlPanelButton.ToggleMicrophoneButton .SVGIcon_Microphone,.VoiceControlPanelButton.ToggleVoiceOutputButton .SVGIcon_Headphones {
+  padding-top: 0;
+  vertical-align: middle;
+}
+.VoiceToggleIconCtn {
+  left: 0;
+  margin: auto;
+  position: relative;
+  top: 0;
+}
+html {
+  &.client_chat_frame {
+    .chatWindow {
+      .chatEntry {
+        padding-right: 0;
+      }
+    }
+  }
+}
+.OneOnOneVoiceRoomControls {
+  .VoiceToggleIconCtn {
+    top: 0;
+  }
+  .friend {
+    .avatarHolder {
+      img {
+        &.avatar {
+          border: none!important;
+        }
+      }
+    }
+  }
+}
+.ChatMessageEntryVoice,.OneOnOneVoiceRoomControls,.chatentry_chatEntryActionsGroup_15mWd,.chatentry_chatEntryControls_2O_X7 {
+  box-shadow: none;
+}
+.OneOnOneVoiceClose {
+  &:hover {
+    background-color: rgb(var(--closeButton));
+  }
+}
+.chatentry_chatTextarea_3e__5 {
+  box-shadow: none!important;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 0;
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(var(--scrollbarSecondary));
+    &:hover {
+      background-color: rgb(var(--scrollbarSecondaryHover))!important;
+    }
+  }
+}
+.chatentry_chatEntryControls_2O_X7 {
+  background-color: transparent!important;
+  padding: 10px;
+  border-bottom: var(--border-width-sm) solid rgb(var(--friendlist));
+  .chatentry_chatSubmitButton_3VRfL {
+    align-self: auto;
+  }
+}
+.chatentry_EmoticonPickerButton_3fgX0 {
+  .shared_svg_library_EmoticonBow_2ly3o {
+    bottom: unset;
+    left: unset;
+    right: unset;
+    top: -2px;
+  }
+}
+.chatentry_EmbedButton_1vvRh .SVGIcon_Paperclip,.chatentry_EmoticonPickerButton_3fgX0 .SVGIcon_Emoticon {
+  background-repeat: no-repeat;
+  background-size: auto;
+  filter: grayscale()!important;
+  height: 100%!important;
+  transition: filter .2s linear;
+  width: 100%!important;
+}
+@media {
+  only {
+    screen {
+      and {
+        (max-width {
+          &:480px) {
+            .chatWindow .chatEntry{flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+}
+}.chatentry_EmoticonPickerButton_3fgX0 {
+  .SVGIcon_Emoticon {
+    background-image: url("data:image/svg+xml,%3Csvg id='emoji' viewBox='0 0 72 72' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='color'%3E%3Ccircle cx='36' cy='36' r='23' fill='%23fcea2b'/%3E%3Cpath fill='%23fff' d='M50.595,41.64a11.5554,11.5554,0,0,1-.87,4.49c-12.49,3.03-25.43.34-27.49-.13a11.4347,11.4347,0,0,1-.83-4.36h.11s14.8,3.59,28.89.07Z'/%3E%3Cpath fill='%23ea5a47' d='M49.7251,46.13c-1.79,4.27-6.35,7.23-13.69,7.23-7.41,0-12.03-3.03-13.8-7.36C24.2951,46.47,37.235,49.16,49.7251,46.13Z'/%3E%3C/g%3E%3Cg id='line'%3E%3Ccircle cx='36' cy='36' r='23' fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3Cellipse cx='28.5684' cy='30.818' rx='3' ry='5.4038'/%3E%3Cellipse cx='43.4316' cy='30.8216' rx='3' ry='5.4038'/%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M50.595,41.64a11.5554,11.5554,0,0,1-.87,4.49c-12.49,3.03-25.43.34-27.49-.13a11.4347,11.4347,0,0,1-.83-4.36h.11s14.8,3.59,28.89.07Z'/%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M49.7251,46.13c-1.79,4.27-6.35,7.23-13.69,7.23-7.41,0-12.03-3.03-13.8-7.36C24.2951,46.47,37.235,49.16,49.7251,46.13Z'/%3E%3C/g%3E%3C/svg%3E%0A");
+  }
+}
+.emoticon_NewEmoticonCircle_3mNrG {
+  background-color: rgb(var(--unreadmessage))!important;
+}
+.chatentry_EmbedButton_1vvRh {
+  .SVGIcon_Paperclip {
+    background-image: url("data:image/svg+xml,%3Csvg id='emoji' viewBox='0 0 72 72' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='color'%3E%3Ccircle cx='36.0731' cy='35.9518' r='22.7702' fill='%23B1CC33' stroke='none'/%3E%3C/g%3E%3Cg id='line'%3E%3Cline x1='36.0731' x2='36.0731' y1='22.3267' y2='49.5769' fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2'/%3E%3Cline x1='49.6982' x2='22.4479' y1='35.9518' y2='35.9518' fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2'/%3E%3Ccircle cx='36.0731' cy='35.9518' r='23' fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E%0A");
+  }
+}
+.singlewindow {
+  .title-area {
+    .title-bar-actions {
+      background: rgb(var(--header));
+      z-index: 99;
+    }
+  }
+  .AvatarAndUser {
+    padding-top: var(--padding-lg);
+  }
+  .friendListButtons {
+    top: var(--padding-lg);
+  }
+}
+.FriendsSettingsNotificationRow,._DialogInputContainer,.voiceMicTestContainer {
+  background: rgb(var(--header));
+  border-radius: var(--border-radius);
+  color: rgb(var(--text));
+}
+.friendSettingsFakeFriend {
+  .fakeFriendAvatar {
+    transform: scale(1,1);
+  }
+}
+.FriendPicker_Suggestions {
+  background-color: rgb(var(--header))!important;
+  border-radius: var(--border-radius)!important;
+}
+.CreateChatDialog {
+  ._DialogColLayout {
+    margin-left: var(--border-width-sm);
+    width: calc(100% - var(--border-width));
+  }
+}
+.voiceMicTestContainer {
+  background-color: rgb(var(--header));
+  border-radius: var(--border-radius);
+}
+.DialogCheckbox,.voiceSelfDirections {
+  background-color: rgb(var(--friendlist));
+  border-radius: var(--border-radius);
+}
+.voicesettings_TransmissionTypeSettings_2wcxX {
+  background-color: rgb(var(--header));
+  border: none;
+  border-radius: var(--border-radius);
+}
+.DialogButton {
+  &.voicesettings_HotkeyClearButton_3Us-N {
+    border-radius: var(--border-radius-round);
+    max-width: unset!important;
+    min-width: unset!important;
+    padding: var(--padding)!important;
+    width: auto!important;
+    &:hover {
+      background: rgb(var(--closeButton))!important;
+      border-radius: var(--border-radius-round);
+      box-shadow: none!important;
+      line {
+        stroke: rgb(var(--closeIconHover));
+      }
+    }
+  }
+}
+.VoiceSettings .advancedSettings.showAdvanced,.VoiceSettings .advancedSettingsButton {
+  border-radius: var(--border-radius)!important;
+  background: rgb(var(--header))!important;
+}
+.DialogButton.Primary:hover,.DialogButton:hover,.DialogCheckbox:hover:not(.Disabled),.radio_Button_3aFxE:hover {
+  box-shadow: 0 0 0 var(--border-width-sm) rgb(var(--buttonOn)) inset!important;
+}
+.VoiceSettings {
+  .advancedSettingsButton {
+    margin-left: var(--border-width-sm)!important;
+    width: calc(100% - var(--border-radius))!important;
+  }
+  .advancedSettings {
+    margin: var(--border-width-sm)!important;
+  }
+}
+.DialogOnOffToggle_Option {
+  border-radius: var(--border-radius-round);
+  margin-left: var(--spacer-sm);
+  width: 30px;
+}
+.DialogOnOffToggle_Option.Off.Active,.DialogOnOffToggle_Option.Off:hover,.toggle_Toggle_3RkmL .toggle_ToggleSwitch_3Ac8T.toggle_Off_2C6dp {
+  background: rgb(var(--buttonOff));
+}
+.DialogOnOffToggle_Option.On.Active,.DialogOnOffToggle_Option.On:hover,.toggle_Toggle_3RkmL .toggle_ToggleSwitch_3Ac8T.toggle_On_2xdfY {
+  background: rgb(var(--buttonOn));
+}
+.DialogCheckbox {
+  &:hover {
+    &:not(.Disabled) {
+      background-color: rgb(var(--friendlist));
+    }
+  }
+  path {
+    stroke: rgb(var(--buttonOn));
+  }
+}
+.radio_Button_3aFxE,button.DialogButton,button.DialogButton.Off {
+  background: rgb(var(--header))!important;
+  border-radius: var(--border-radius);
+  color: rgb(var(--text))!important;
+}
+.DialogButton.Primary,.DialogSlider_Value,.radio_Button_3aFxE.radio_Active_3w-nK {
+  background: rgb(var(--buttonOn))!important;
+}
+.DialogTwoColLayout,.FriendsSettingsChatFontSizeSection_ButtonRow,.FriendsSettingsFlashSection_ButtonRow {
+  background: rgb(var(--friendlist))!important;
+  padding: 0;
+}
+.radio_Group_1Ma_m {
+  background: rgb(var(--header));
+  border-radius: var(--border-radius);
+}
+.DialogSlider_Slider {
+  background: rgb(var(--buttonOff))!important;
+  border: 0!important;
+}
+.DialogDropDownMenu {
+  &._DialogInputContainer {
+    background-color: rgb(var(--header))!important;
+    border: none!important;
+  }
+}
+.DialogDropDownMenu_Item {
+  &:hover {
+    background-color: rgb(var(--friendlist))!important;
+    border-radius: var(--border-radius)!important;
+  }
+}
+::-webkit-scrollbar {
+  background: 0 0;
+  height: 10px;
+  overflow: visible;
+  width: 10px;
+}
+::-webkit-scrollbar-button:vertical:decrement,::-webkit-scrollbar-button:vertical:increment {
+  display: none!important;
+}
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: var(--border-radius-lg);
+  border-width: var(--border-width-sm);
+  margin: 4px;
+  min-height: 32px;
+  min-width: 32px;
+  width: 14px;
+  &:hover {
+    background-color: rgb(var(--scrollbarPrimaryHover))!important;
+    border-radius: 20px!important;
+  }
+}
+.DialogBody:hover::-webkit-scrollbar-thumb,.FriendPicker_Suggestions_List:hover::-webkit-scrollbar-thumb,.chatHistoryScroll:hover::-webkit-scrollbar-thumb,.chatRoomListContainer:hover::-webkit-scrollbar-thumb,.friendlistListContainer:hover::-webkit-scrollbar-thumb {
+  background-color: rgb(var(--scrollbarPrimary));
+  border-radius: 20px!important;
+}
+.PagedSettingsDialog_PageList {
+  &::after {
+    content: 'Themed by: \A Bryn Bennett \A       "aka" LaserFlash';
+    display: block;
+    line-height: 1.25em;
+    white-space: pre;
+  }
+}
+.avatarFrame {
+  transform: scale(1.111)!important;
+}
